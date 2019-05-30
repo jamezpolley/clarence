@@ -63,7 +63,7 @@ end
 
 a = Mechanize.new
 a.get("https://www.ccc.tas.gov.au/planning-development/planning/advertised-planning-permit-applications/") do |page|
-  page.search('.uContentList a').each do |a|
+  page.search('.doc-list a').each do |a|
     unless a.at('img')
       url = a['href']
       s = a.inner_text.split('-')
