@@ -67,6 +67,7 @@ a.get("https://www.ccc.tas.gov.au/planning-development/planning/advertised-plann
     unless a.at('img')
       url = a['href']
       s = a.inner_text.split('-')
+      puts "#{s.count} #{s}"
       # Skip over links that we don't know how to handle (e.g. Notice under Historic Cultural Heritage Act 1995)
       if s.count >= 5
         record = {
